@@ -1,0 +1,43 @@
+THE STEPS IN ENGLISH BELOW THIS ONE.
+
+Instrucciones de configuración para ejecutar la aplicación usando Docker
+Paso 1: Configuración del entorno
+Asegúrate de tener Docker instalado en tu máquina. Si no lo tienes, puedes descargarlo e instalarlo desde Docker's official website.
+Añade el archivo .env enviado, debería ser algo asi:
+   POSTGRES_USER=postgres
+   POSTGRES_PASSWORD=tu_contraseña_secreta
+   POSTGRES_DB=nombre_postgres_db
+
+Paso 2: Construcción y ejecución de los contenedores Docker
+Abre una terminal en la raíz de tu proyecto.
+Ejecuta el siguiente comando para construir y ejecutar tus contenedores Docker:
+   docker-compose up --build
+
+   En caso de haber errores, solo usa docker-compose down, luego docker-compose build y luego docker-compose up
+Este comando construirá las imágenes de Docker para tu aplicación y la base de datos PostgreSQL, y luego iniciará los contenedores.
+
+Una vez que los contenedores estén en ejecución, puedes acceder a tu aplicación a través de http://localhost:3000.
+
+Desde tu POSTMAN y seguir la documentación o la colección de POSTMAN enviada por mí. 
+
+ENGLISH:
+
+Configuration instructions for running the application using Docker
+Step 1: Environment setup
+Make sure you have Docker installed on your machine. If you don't have it, you can download and install it from Docker's official website.
+Add the sent .env file, it should look something like this:
+   POSTGRES_USER=postgres
+   POSTGRES_PASSWORD=your_secret_password
+   POSTGRES_DB=postgres_db_name
+
+Step 2: Building and running Docker containers
+Open a terminal in the root of your project.
+Run the following command to build and run your Docker containers:
+   docker-compose up --build
+
+   In case of errors, just use docker-compose down, then docker-compose build and then docker-compose up.
+This command will build the Docker images for your application and PostgreSQL database, then start the containers.
+
+Once the containers are running, you can access your application through http://localhost:3000.
+
+From your POSTMAN and follow the documentation or the POSTMAN collection sent by me.
