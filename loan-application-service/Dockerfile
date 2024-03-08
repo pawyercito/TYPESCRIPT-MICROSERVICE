@@ -13,7 +13,7 @@ RUN npm install
 # Instalar bcrypt y compilarlo
 RUN npm install bcrypt
 
-## Instalar @nestjs/passport
+# Instalar @nestjs/passport
 RUN npm install @nestjs/passport
 
 # Instalar passport-jwt
@@ -22,8 +22,11 @@ RUN npm install passport-jwt
 # Copiar el resto de los archivos de la aplicación
 COPY . .
 
+# Compilar los archivos TypeScript en JavaScript
+RUN npm run build
+
 # Exponer el puerto en el que se ejecutará la aplicación
 EXPOSE 3000
 
 # Comando para iniciar la aplicación
-CMD ["npm", "run", "start:prod"]
+CMD ["node", "dist/main"]
